@@ -2,9 +2,9 @@
 Contributors: GamerZ  
 Donate link: https://lesterchan.net/site/donation/  
 Tags: useronline, usersonline, wp-useronline, online, users, user, ajax, widget  
-Requires at least: 4.0  
+Requires at least: 4.6  
 Tested up to: 6.7  
-Stable tag: 2.88.4  
+Stable tag: 2.88.5  
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -85,6 +85,9 @@ Make sure your host is running PHP 5. The only foolproof way to do this is to ad
 `var_dump(PHP_VERSION);`
 
 ## Changelog
+### 2.88.5
+* FIXED: Update WP SCB Framework to fix load_textdomain_just_in_time warning
+* FIXED: Remove load_plugin_textdomain since it is no longer needed since WP 4.6
 
 ### 2.88.4
 * FIXED: Add load_plugin_textdomain during init
