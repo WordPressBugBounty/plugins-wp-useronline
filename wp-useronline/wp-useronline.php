@@ -3,7 +3,7 @@
 Plugin Name: WP-UserOnline
 Plugin URI: https://lesterchan.net/portfolio/programming/php/
 Description: Enable you to display how many users are online on your Wordpress site
-Version: 2.88.6
+Version: 2.88.7
 Author: Lester 'GaMerZ' Chan
 Author URI: https://lesterchan.net
 Text Domain: wp-useronline
@@ -94,3 +94,9 @@ function _useronline_init() {
 }
 scb_init( '_useronline_init' );
 
+add_action( 'plugins_loaded', 'useronline_init_widget' );
+function useronline_init_widget() {
+	require_once __DIR__ . '/scb/Widget.php';
+	require_once __DIR__ . '/widget.php';
+	scbWidget::init( 'UserOnline_Widget', __FILE__, 'useronline' );
+}
